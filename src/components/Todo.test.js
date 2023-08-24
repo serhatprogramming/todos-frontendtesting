@@ -28,3 +28,10 @@ test("check correct render with getByTestId", () => {
   const div = screen.getByTestId("task-id");
   expect(div).toHaveTextContent("Task: Sample Task. Completed? No");
 });
+
+test("check correct render with querySelector by targeting id", () => {
+  const todo = { task: "Sample Task", done: false };
+  const { container } = render(<Todo todo={todo} />);
+  const div = container.querySelector("#task-id");
+  expect(div).toHaveTextContent("Task: Sample Task. Completed? No");
+});
