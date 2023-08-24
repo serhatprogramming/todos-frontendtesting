@@ -1,6 +1,6 @@
 const Todo = ({ todo }) => {
   return (
-    <div>
+    <div className="task-container">
       Task: {todo.task}. Completed? {todo.done ? "Yes" : "No"}
     </div>
   );
