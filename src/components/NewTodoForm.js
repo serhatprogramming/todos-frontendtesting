@@ -7,6 +7,7 @@ const NewTodoForm = ({ handleNewTodo, task, setTask }) => (
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
+        data-testid="new-task-input"
       />
       <button type="submit">Add to the list</button>
     </div>

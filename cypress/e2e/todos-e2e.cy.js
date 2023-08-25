@@ -33,4 +33,10 @@ describe("Logged-In Tests", () => {
     cy.get('input[type="password"]').type("1234");
     cy.get("form").submit();
   });
+  it("should add a new todo after successful login", () => {
+    const todoText = "Test Todo Item with data-testid";
+    cy.get('[data-testid="new-task-input"]').type(todoText);
+    cy.contains("Add").click();
+    cy.contains(todoText);
+  });
 });
